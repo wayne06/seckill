@@ -1,0 +1,45 @@
+mybatis:
+    mapper-locations: classpath:mapping/*.xml
+server:
+    port: 8090
+spring:
+    mvc:
+        throw-exception-if-no-handler-found: true
+    resources:
+        add-mappings: false
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        name: seckill
+        password: root
+        type: com.alibaba.druid.pool.DruidDataSource
+        url: jdbc:mysql://localhost:3306/seckill?useSSL=false
+        username: root
+    redis:
+        host: 192.168.140.157
+        port: 6379
+        database: 10
+        jedis:
+            pool:
+                max-active: 50
+                min-idle: 20
+
+mq:
+    nameserver:
+        addr: 192.168.140.151:9876
+    topicname: stock
+
+
+#    redis:
+#        host: 192.168.140.143
+#        database: 0
+#        lettuce:
+#            pool:
+#                max-active: 8
+#                max-idle: 8
+#                max-wait: -1
+#                min-idle: 0
+#        password: ''
+#        port: 6379
+
+
+
